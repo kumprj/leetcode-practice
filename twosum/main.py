@@ -1,6 +1,13 @@
 
-list = [0, 1, 2, 3]
+nums = [3, 2, 4]
+target = 6
 def main():
+    slower = o_of_n2()
+    print(slower)
+    faster = o_of_n()
+    print(faster)
+
+def o_of_n2():
     curr_list1 = 0
     index1 = 0
 
@@ -19,13 +26,13 @@ def main():
         index1+=1
 
 def o_of_n():
-    prevTable = {}
+    iterated_over = {}
 
-    for i,currVal in enumerate(nums):
-        complement = target - currVal
-        if complement in prevTable:
-            return [prevTable[complement],i]
-        prevTable[currVal] = i
+    for i,current in enumerate(nums):
+        sum = target - current
+        if sum in iterated_over:
+            return [iterated_over[sum],i]
+        iterated_over[current] = i
 
 
 if __name__ == "__main__":
