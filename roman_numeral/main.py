@@ -8,9 +8,7 @@ C = 100
 dict = {'IV': 4, 'V': 5, 'L': 50, 'X' : 10, 'IX' : 9, 'I' : 1, 'C' : 100}
 
 def main():
-    numeral_string = 'LVIVIV'
-    print(type(dict))
-    print(dict)
+    numeral_string = 'LIV'
     roman_numeral(numeral_string)
 
 def roman_numeral(numeral_string):
@@ -24,10 +22,8 @@ def roman_numeral(numeral_string):
 
     sum += count_iv * IV
     sum += count_ix * IX
-    print(sum)
     # Then sum rest of the normal numbers.
     for item in numeral_string[::1]:
-        print(dict[item])
         sum += dict.get(item)
         # Get item from dictionary to add to sum
         # sum += *Look up the value to add*
