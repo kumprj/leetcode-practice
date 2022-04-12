@@ -1,7 +1,9 @@
 
 def main():
+
+    # Need to solve the pop, it cant pop on any of the 'end' - it needs to match.
     s = "(())"
-    my_stack = [] # check data type
+    my_stack = list() # check data type
     for item in s[::1]:
         if item == "(" or item == "{" or item == "[":
             my_stack.append(item) # get proper syntax for pushing to stack
