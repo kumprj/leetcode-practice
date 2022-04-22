@@ -1,21 +1,21 @@
 
 def main():
+    print(isValid("[[][[]"))
 
-    # Need to solve the pop, it cant pop on any of the 'end' - it needs to match.
-    s = "(())"
-    my_stack = list() # check data type
+
+# Need to solve the pop, it cant pop on any of the 'end' - it needs to match.
+def isValid(s: str) -> bool:
+    stack = list()
     for item in s[::1]:
-        if item == "(" or item == "{" or item == "[":
-            my_stack.append(item) # get proper syntax for pushing to stack
+        if item == "(": stack.append(")")
+        elif item == "[": stack.append("]")
+        elif item == "{": stack.append("}")
         else:
-            my_stack.pop() # remove from stack, maybe check if it equals the type that went in?
-    
-    print(my_stack) # if my_stack is empty, this is a success.
-    if not my_stack:
-        print('Valid Paren')
-    else:
-        print('Not Valid Paren')
-
-
+            if not stack:
+                return False
+            if stack.pop() != item:
+                return False
+            
+    return True if not stack else False
 if __name__ == "__main__":
     main()
