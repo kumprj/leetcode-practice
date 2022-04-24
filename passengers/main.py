@@ -10,10 +10,11 @@ def init():
     list.append(Passenger('Joe Sr', 'ABC123', 3))
     list.append(Passenger('Joe', 'ABC123', 14))
     list.append(Passenger('Zach', 'XYZ324', 16))
-    list.append(Passenger('Brooke', 'NBA091', 1))
+    list.append(Passenger('Chris', 'NBA091', 1))
     list.append(Passenger('Rob', 'BAF121', 9))
     list.append(Passenger('Joe Jr', 'ABC123', 77))
     return list
+
 def main():
     passenger_list = init()
     passenger_map = dict()
