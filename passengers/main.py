@@ -24,8 +24,9 @@ def main():
     passenger_map = dict()
     passenger_list = sorted(passenger_list, key=lambda x: x.loyalty_num)
     
-    for pers in passenger_list:
-        print(f'{pers.name}, {pers.loyalty_num}')
+    # Sort the list based on Loyalty Nums alone.
+    # for pers in passenger_list:
+    #     print(f'{pers.name}, {pers.loyalty_num}')
         
     for i, person in enumerate(passenger_list):
         
@@ -43,10 +44,10 @@ def main():
     # Sort the list based on Loyalty Number.
     passenger_list = sorted(passenger_list, key=lambda x: x.loyalty_num)
     
-    # Verify the list looks correct.
-    print('After Sorting with new Loyalty Nums') 
-    for pers in passenger_list:
-        print(f'{pers.name}, {pers.loyalty_num}')
+    # Verify the list looks correct after updating Loyalty Numbers.
+    # print('After Sorting with new Loyalty Nums') 
+    # for pers in passenger_list:
+    #     print(f'{pers.name}, {pers.loyalty_num}')
     
 
 if __name__ == "__main__":
