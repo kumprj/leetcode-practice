@@ -30,7 +30,7 @@ def main():
         
     for i, person in enumerate(passenger_list):
         
-        # If we have already seen the PNR, we update that person's loyalty number because they are on a shared reservation.
+        # If we have already seen the PNR, and their Loyalty Num is better, we update that person's loyalty number because they are on a shared reservation.
         if person.pnr in passenger_map:
             if person.loyalty_num > passenger_map[person.pnr].loyalty_num:
                 passenger_list[i].loyalty_num = passenger_map[person.pnr].loyalty_num
