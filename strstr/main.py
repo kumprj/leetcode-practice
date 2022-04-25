@@ -1,12 +1,13 @@
 def strStr(haystack: str, needle: str) -> int:
+    
     if needle == "":
         return 0
     needle_len = len(needle)
     index = 0
     for substr in haystack:
-        if needle == haystack[0:needle_len]:
+        if needle == haystack[index:needle_len]:
             return index
-        haystack = haystack[1:]
+        # haystack = haystack[1:]
         index+=1
     
     return -1
